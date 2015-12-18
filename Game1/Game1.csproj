@@ -59,6 +59,7 @@
   <ItemGroup>
     <None Include="ClassDiagram1.cd" />
     <None Include="Content\bin\Windows\lol.xnb" />
+    <None Include="Content\font1.spritefont" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath)\MonoGame\v3.0\MonoGame.Content.Builder.targets" />
