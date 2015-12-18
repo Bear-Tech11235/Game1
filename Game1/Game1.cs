@@ -103,6 +103,7 @@ namespace Game1
                         if(wordSplit[i].ToString() == lowerInString)
                         {
                             //input letter matches one in the word
+                            break;
                         }
                         else
                         {
@@ -139,6 +140,7 @@ namespace Game1
                                this.Window.ClientBounds.Height / 2);
             Vector2 origin = new Vector2(hangmanFrameWidth / 2.0f, hangmanFrameHeight);
             GraphicsDevice.Clear(Color.CornflowerBlue);
+            hangmanFrameIndex = livesLost;
 
             spriteBatch.Begin();
             spriteBatch.Draw(hangmanSpriteSheet, position, source, Color.White, 0.0f,
