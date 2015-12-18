@@ -15,13 +15,14 @@ namespace Game1
         private string word;
         private char[] wordSplit;
         int charCount;
+        
         //hangman spritesheet data
         Texture2D hangmanSpriteSheet;
         int hangmanFrameIndex = 0;
         int hangmanFrameWidth = 200;
         int hangmanFrameHeight = 200;
         int livesLost = 0;
-
+        int winCount = 0;
 
         public Game1()
         {
@@ -80,7 +81,7 @@ namespace Game1
             
             if(word == null)
             {
-                word = sHandler.chooseWord();
+                word = "poo";// sHandler.chooseWord();
                 wordSplit = word.ToCharArray();
                 charCount = word.Length;
 
@@ -98,17 +99,25 @@ namespace Game1
                     
                     inString = keys[0].ToString(); // stores inputted letter
                     string lowerInString = inString.ToLower(); // needs to be lower case for comparison to lowercase word that was selected, all words in array are totally lowercase
-                    for(int i = 0; i < charCount; i++)
+                    bool youWin = false;
+                    for (int i = 0; i < charCount; i++)
                     {
+                       
                         if(wordSplit[i].ToString() == lowerInString)
                         {
                             //input letter matches one in the word
-                            break;
+                            winCount += 1;
+                            youWin = true;
+                            if (i == charCount - 1)
+                            {
+                                break;
+                            }
                         }
                         else
                         {
                             //input letter doesnt match
-                            if (i == charCount - 1)
+                            
+                            if (i == charCount - 1 && youWin == false)
                             {
                                 livesLost += 1;
                             }
@@ -122,7 +131,10 @@ namespace Game1
                 }
                 
             }
-
+            if(winCount == charCount)
+            {
+                Exit();
+            }
             oldState = newState;
 
 
@@ -146,6 +158,7 @@ namespace Game1
             spriteBatch.Draw(hangmanSpriteSheet, position, source, Color.White, 0.0f,
   origin, 1.0f, SpriteEffects.None, 0.0f);
             spriteBatch.End();
+
 
             base.Draw(gameTime);
         }
