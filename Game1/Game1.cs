@@ -11,10 +11,7 @@ namespace Game1
     {
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
-<<<<<<< HEAD
         private KeyboardState oldState;
-=======
-        KeyboardState oldState;
         private string word;
         private char[] wordSplit;
         int charCount;
@@ -25,7 +22,7 @@ namespace Game1
         int hangmanFrameHeight = 200;
         int livesLost = 0;
 
->>>>>>> refs/remotes/origin/jenga
+
         public Game1()
         {
             graphics = new GraphicsDeviceManager(this);
@@ -78,23 +75,6 @@ namespace Game1
                 Exit();
 
             // TODO: Add your update logic here
-<<<<<<< HEAD
-                // gets a string from the list, splits it into an array and gets it's length in and int
-            StringHandling sHandler = new StringHandling();
-            string word = sHandler.chooseWord();
-            char[] wordSplit = word.ToCharArray();
-            int charCount = word.Length;
-
-            //User input
-            KeyboardState newState = Keyboard.GetState();
-            if (oldState.IsKeyUp(Keys.Left) && newState.IsKeyDown(Keys.Left))
-            {
-                // do something here
-                // this will only be called when the key if first pressed
-            }
-            oldState = newState;
-
-=======
             //Gets a string, creates an array of it's character, creates an int equal to it's length
             StringHandling sHandler = new StringHandling();
             
@@ -140,7 +120,6 @@ namespace Game1
             }
 
             oldState = newState;
->>>>>>> refs/remotes/origin/jenga
 
 
             base.Update(gameTime);
