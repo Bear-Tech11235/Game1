@@ -1,6 +1,8 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
+using System;
+using System.Collections.Generic;
 
 namespace Game1
 {
@@ -15,7 +17,7 @@ namespace Game1
         private string word;
         private char[] wordSplit;
         int charCount;
-        
+        List<string> WinList =  new List<string>();
         //hangman spritesheet data
         Texture2D hangmanSpriteSheet;
         int hangmanFrameIndex = 0;
@@ -84,7 +86,12 @@ namespace Game1
                 word = sHandler.chooseWord();
                 wordSplit = word.ToCharArray();
                 charCount = word.Length;
+                
+                for (int i = 0; i < charCount; i++)
+                {
 
+                    WinList.Add("_");
+                }
             }
             
 
@@ -108,6 +115,7 @@ namespace Game1
                             //input letter matches one in the word
                             winCount += 1;
                             youWin = true;
+                            WinList[i] = wordSplit[i].ToString();
                             if (i == charCount - 1)
                             {
                                 break;
