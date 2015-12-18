@@ -17,7 +17,7 @@ namespace Game1
         int charCount;
         //hangman spritesheet data
         Texture2D hangmanSpriteSheet;
-        int hangmanFrameIndex = 1;
+        int hangmanFrameIndex = 0;
         int hangmanFrameWidth = 200;
         int hangmanFrameHeight = 200;
         int livesLost = 0;
@@ -107,7 +107,10 @@ namespace Game1
                         else
                         {
                             //input letter doesnt match
-                            livesLost += 1;
+                            if (i == charCount - 1)
+                            {
+                                livesLost += 1;
+                            }
 
                         }
                     }
