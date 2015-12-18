@@ -11,7 +11,7 @@ namespace Game1
     {
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
-
+        private KeyboardState oldState;
         public Game1()
         {
             graphics = new GraphicsDeviceManager(this);
@@ -63,11 +63,23 @@ namespace Game1
                 Exit();
 
             // TODO: Add your update logic here
+                // gets a string from the list, splits it into an array and gets it's length in and int
             StringHandling sHandler = new StringHandling();
             string word = sHandler.chooseWord();
             char[] wordSplit = word.ToCharArray();
             int charCount = word.Length;
-            //meme
+
+            //User input
+            KeyboardState newState = Keyboard.GetState();
+            if (oldState.IsKeyUp(Keys.Left) && newState.IsKeyDown(Keys.Left))
+            {
+                // do something here
+                // this will only be called when the key if first pressed
+            }
+            oldState = newState;
+
+
+
             base.Update(gameTime);
         }
 
