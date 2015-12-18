@@ -75,3 +75,6 @@ Game1/obj/x86/Debug/Game1.csprojResolveAssemblyReference.cache
 Game1/obj/x86/Debug/Game1.exe
 *.pdb
 .vs/Game1/v14/.suo
+Game1/Content/obj/Windows/hangmsn.mgcontent
+Game1/Content/obj/Windows/.mgcontent
+*.cache
