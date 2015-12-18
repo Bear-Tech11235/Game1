@@ -81,7 +81,7 @@ namespace Game1
             
             if(word == null)
             {
-                word = "poo";// sHandler.chooseWord();
+                word = sHandler.chooseWord();
                 wordSplit = word.ToCharArray();
                 charCount = word.Length;
 
