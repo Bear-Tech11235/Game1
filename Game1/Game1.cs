@@ -12,6 +12,10 @@ namespace Game1
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
         KeyboardState oldState;
+        private string word;
+        private char[] wordSplit;
+        int charCount;
+
         public Game1()
         {
             graphics = new GraphicsDeviceManager(this);
@@ -65,16 +69,45 @@ namespace Game1
             // TODO: Add your update logic here
             //Gets a string, creates an array of it's character, creates an int equal to it's length
             StringHandling sHandler = new StringHandling();
-            string word = sHandler.chooseWord();
-            char[] wordSplit = word.ToCharArray();
-            int charCount = word.Length;
+            
+            if(word == null)
+            {
+                word = sHandler.chooseWord();
+                wordSplit = word.ToCharArray();
+                charCount = word.Length;
+
+            }
+            
 
             //input handling
-            KeyboardState newState = Keyboard.GetState();
-            if (oldState.IsKeyUp(Keys.Left) && newState.IsKeyDown(Keys.Left))
+            string inString; // where inputted letters will be stored when input is received
+            KeyboardState newState = Keyboard.GetState(); // gets the current state of keyboard
+            Keys[] keys = newState.GetPressedKeys(); // gets an array of all the keyboard buttons pressed
+            foreach (Keys key in keys)
             {
-                // do something here
-                // this will only be called when the key if first pressed
+                if (oldState.IsKeyUp(key) && keys.Length == 1 && word != null) // makes sure only one key is pressed, isn't spammed and that a word is actually chosen, basically preventing cheating and errors and instantly losing
+                {
+                    
+                    inString = keys[0].ToString(); // stores inputted letter
+                    string lowerInString = inString.ToLower(); // needs to be lower case for comparison to lowercase word that was selected, all words in array are totally lowercase
+                    for(int i = 0; i < charCount; i++)
+                    {
+                        if(wordSplit[i].ToString() == lowerInString)
+                        {
+                            //input letter matches one in the word
+                        }
+                        else
+                        {
+                            //input letter doesnt match
+
+                        }
+                    }
+                }
+                else
+                {
+                    //inform the user to only press one key at a time etc, user friendly bullshit
+                }
+                
             }
 
             oldState = newState;
