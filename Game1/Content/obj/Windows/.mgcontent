@@ -4,11 +4,6 @@
   <Platform>Windows</Platform>
   <Config />
   <SourceFiles>
-<<<<<<< HEAD
-    <File>D:/Beartech/Documents/Visual Studio 2015/Projects/Game1/Game1/Content/specialist 2b q16 b.PNG</File>
-=======
-    <File>C:/Users/joe/Documents/Visual Studio 2015/Projects/Game1/Game1/Content/lol.PNG</File>
-    <File>C:/Users/joe/Documents/Visual Studio 2015/Projects/Game1/Game1/Content/font1.spritefont</File>
->>>>>>> refs/remotes/origin/jenga
+    <File>D:/Beartech/Documents/Visual Studio 2015/Projects/Game1/Game1/Content/hangmsn.png</File>
   </SourceFiles>
 </SourceFileCollection>

@@ -49,10 +49,11 @@ C:\Users\joe\Documents\Visual Studio 2015\Projects\Game1\Game1\bin\Windows\Debug
 C:\Users\joe\Documents\Visual Studio 2015\Projects\Game1\Game1\bin\Windows\Debug\SharpDX.Direct3D9.xml
 C:\Users\joe\Documents\Visual Studio 2015\Projects\Game1\Game1\obj\x86\Debug\Game1.exe
 C:\Users\joe\Documents\Visual Studio 2015\Projects\Game1\Game1\obj\x86\Debug\Game1.pdb
-<<<<<<< HEAD
 >>>>>>> refs/remotes/origin/jenga
-=======
 C:\Users\joe\Documents\Visual Studio 2015\Projects\Game1\Game1\bin\Windows\Debug\Content\font1.xnb
 C:\Users\joe\Documents\Visual Studio 2015\Projects\Game1\Game1\bin\Windows\Debug\Content\lol.xnb
 C:\Users\joe\Documents\Visual Studio 2015\Projects\Game1\Game1\obj\x86\Debug\Game1.csprojResolveAssemblyReference.cache
->>>>>>> refs/remotes/origin/jenga
+D:\Beartech\Documents\Visual Studio 2015\Projects\Game1\Game1\bin\Windows\Debug\Content\font1.xnb
+D:\Beartech\Documents\Visual Studio 2015\Projects\Game1\Game1\bin\Windows\Debug\Content\lol.xnb
+D:\Beartech\Documents\Visual Studio 2015\Projects\Game1\Game1\bin\Windows\Debug\Content\hangmsn.xnb
+D:\Beartech\Documents\Visual Studio 2015\Projects\Game1\Game1\bin\Windows\Debug\Content\specialist 2b q16 b.xnb
