@@ -11,7 +11,7 @@ namespace Game1
     {
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
-
+        KeyboardState oldState;
         public Game1()
         {
             graphics = new GraphicsDeviceManager(this);
@@ -69,7 +69,15 @@ namespace Game1
             char[] wordSplit = word.ToCharArray();
             int charCount = word.Length;
 
+            //input handling
+            KeyboardState newState = Keyboard.GetState();
+            if (oldState.IsKeyUp(Keys.Left) && newState.IsKeyDown(Keys.Left))
+            {
+                // do something here
+                // this will only be called when the key if first pressed
+            }
 
+            oldState = newState;
 
 
             base.Update(gameTime);
