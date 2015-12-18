@@ -67,7 +67,7 @@ namespace Game1
             string word = sHandler.chooseWord();
             char[] wordSplit = word.ToCharArray();
             int charCount = word.Length;
-
+            //meme
             base.Update(gameTime);
         }
 
