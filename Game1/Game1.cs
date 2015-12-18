@@ -63,6 +63,10 @@ namespace Game1
                 Exit();
 
             // TODO: Add your update logic here
+            StringHandling sHandler = new StringHandling();
+            string word = sHandler.chooseWord();
+            char[] wordSplit = word.ToCharArray();
+            int charCount = word.Length;
 
             base.Update(gameTime);
         }
