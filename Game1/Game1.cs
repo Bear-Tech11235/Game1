@@ -63,11 +63,15 @@ namespace Game1
                 Exit();
 
             // TODO: Add your update logic here
+            //Gets a string, creates an array of it's character, creates an int equal to it's length
             StringHandling sHandler = new StringHandling();
             string word = sHandler.chooseWord();
             char[] wordSplit = word.ToCharArray();
             int charCount = word.Length;
-            //meme
+
+
+
+
             base.Update(gameTime);
         }
 
