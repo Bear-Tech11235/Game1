@@ -18,6 +18,12 @@ namespace Game1
         private string word;
         private char[] wordSplit;
         int charCount;
+        //hangman spritesheet data
+        Texture2D hangmanSpriteSheet;
+        int hangmanFrameIndex = 1;
+        int hangmanFrameWidth = 200;
+        int hangmanFrameHeight = 200;
+        int livesLost = 0;
 
 >>>>>>> refs/remotes/origin/jenga
         public Game1()
@@ -47,6 +53,7 @@ namespace Game1
         {
             // Create a new SpriteBatch, which can be used to draw textures.
             spriteBatch = new SpriteBatch(GraphicsDevice);
+            hangmanSpriteSheet = Content.Load<Texture2D>("hangmsn");
 
             // TODO: use this.Content to load your game content here
         }
@@ -57,7 +64,7 @@ namespace Game1
         /// </summary>
         protected override void UnloadContent()
         {
-            // TODO: Unload any non ContentManager content here
+            Content.Unload();
         }
 
         /// <summary>
@@ -120,6 +127,7 @@ namespace Game1
                         else
                         {
                             //input letter doesnt match
+                            livesLost += 1;
 
                         }
                     }
@@ -144,9 +152,16 @@ namespace Game1
         /// <param name="gameTime">Provides a snapshot of timing values.</param>
         protected override void Draw(GameTime gameTime)
         {
+            Rectangle source = new Rectangle(hangmanFrameIndex * hangmanFrameWidth, 0, hangmanFrameWidth, hangmanFrameHeight);
+            Vector2 position = new Vector2(this.Window.ClientBounds.Width / 2,
+                               this.Window.ClientBounds.Height / 2);
+            Vector2 origin = new Vector2(hangmanFrameWidth / 2.0f, hangmanFrameHeight);
             GraphicsDevice.Clear(Color.CornflowerBlue);
 
-            // TODO: Add your drawing code here
+            spriteBatch.Begin();
+            spriteBatch.Draw(hangmanSpriteSheet, position, source, Color.White, 0.0f,
+  origin, 1.0f, SpriteEffects.None, 0.0f);
+            spriteBatch.End();
 
             base.Draw(gameTime);
         }

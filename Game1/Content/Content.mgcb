@@ -13,11 +13,7 @@
 
 #---------------------------------- Content ---------------------------------#
 
-<<<<<<< HEAD
-#begin specialist 2b q16 b.PNG
-=======
-#begin lol.PNG
->>>>>>> refs/remotes/origin/jenga
+#begin hangmsn.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -27,15 +23,5 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-<<<<<<< HEAD
-/build:specialist 2b q16 b.PNG
-=======
-/build:lol.PNG
-
-#begin font1.spritefont
-/importer:FontDescriptionImporter
-/processor:FontDescriptionProcessor
-/processorParam:TextureFormat=Compressed
-/build:font1.spritefont
->>>>>>> refs/remotes/origin/jenga
+/build:hangmsn.png
 
