@@ -11,7 +11,15 @@ namespace Game1
     {
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
+<<<<<<< HEAD
         private KeyboardState oldState;
+=======
+        KeyboardState oldState;
+        private string word;
+        private char[] wordSplit;
+        int charCount;
+
+>>>>>>> refs/remotes/origin/jenga
         public Game1()
         {
             graphics = new GraphicsDeviceManager(this);
@@ -63,6 +71,7 @@ namespace Game1
                 Exit();
 
             // TODO: Add your update logic here
+<<<<<<< HEAD
                 // gets a string from the list, splits it into an array and gets it's length in and int
             StringHandling sHandler = new StringHandling();
             string word = sHandler.chooseWord();
@@ -78,6 +87,52 @@ namespace Game1
             }
             oldState = newState;
 
+=======
+            //Gets a string, creates an array of it's character, creates an int equal to it's length
+            StringHandling sHandler = new StringHandling();
+            
+            if(word == null)
+            {
+                word = sHandler.chooseWord();
+                wordSplit = word.ToCharArray();
+                charCount = word.Length;
+
+            }
+            
+
+            //input handling
+            string inString; // where inputted letters will be stored when input is received
+            KeyboardState newState = Keyboard.GetState(); // gets the current state of keyboard
+            Keys[] keys = newState.GetPressedKeys(); // gets an array of all the keyboard buttons pressed
+            foreach (Keys key in keys)
+            {
+                if (oldState.IsKeyUp(key) && keys.Length == 1 && word != null) // makes sure only one key is pressed, isn't spammed and that a word is actually chosen, basically preventing cheating and errors and instantly losing
+                {
+                    
+                    inString = keys[0].ToString(); // stores inputted letter
+                    string lowerInString = inString.ToLower(); // needs to be lower case for comparison to lowercase word that was selected, all words in array are totally lowercase
+                    for(int i = 0; i < charCount; i++)
+                    {
+                        if(wordSplit[i].ToString() == lowerInString)
+                        {
+                            //input letter matches one in the word
+                        }
+                        else
+                        {
+                            //input letter doesnt match
+
+                        }
+                    }
+                }
+                else
+                {
+                    //inform the user to only press one key at a time etc, user friendly bullshit
+                }
+                
+            }
+
+            oldState = newState;
+>>>>>>> refs/remotes/origin/jenga
 
 
             base.Update(gameTime);
