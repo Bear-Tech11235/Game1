@@ -23,8 +23,13 @@ namespace Game1
         int hangmanFrameIndex = 0;
         int hangmanFrameWidth = 200;
         int hangmanFrameHeight = 200;
+
         int livesLost = 0;
         int winCount = 0;
+
+        //font
+        private SpriteFont font;
+        private int score = 0;
 
         public Game1()
         {
@@ -53,7 +58,8 @@ namespace Game1
         {
             // Create a new SpriteBatch, which can be used to draw textures.
             spriteBatch = new SpriteBatch(GraphicsDevice);
-            hangmanSpriteSheet = Content.Load<Texture2D>("hangmsn");
+            hangmanSpriteSheet = Content.Load<Texture2D>("hangman");
+            font = Content.Load<SpriteFont>("font1");
 
             // TODO: use this.Content to load your game content here
         }
@@ -156,15 +162,19 @@ namespace Game1
         protected override void Draw(GameTime gameTime)
         {
             Rectangle source = new Rectangle(hangmanFrameIndex * hangmanFrameWidth, 0, hangmanFrameWidth, hangmanFrameHeight);
-            Vector2 position = new Vector2(this.Window.ClientBounds.Width / 2,
-                               this.Window.ClientBounds.Height / 2);
+            Vector2 position = new Vector2(200, this.Window.ClientBounds.Height / 2);
             Vector2 origin = new Vector2(hangmanFrameWidth / 2.0f, hangmanFrameHeight);
             GraphicsDevice.Clear(Color.CornflowerBlue);
-            hangmanFrameIndex = livesLost;
+            if (hangmanFrameIndex != 7)
+                hangmanFrameIndex = livesLost;
 
             spriteBatch.Begin();
             spriteBatch.Draw(hangmanSpriteSheet, position, source, Color.White, 0.0f,
   origin, 1.0f, SpriteEffects.None, 0.0f);
+            spriteBatch.DrawString(font, "Word:", new Vector2(500, 80), Color.Black);
+            spriteBatch.DrawString(font, word, new Vector2(500, 150), Color.Black);
+            spriteBatch.DrawString(font, "Incorrect Letters", new Vector2(250, 250), Color.Black);
+            spriteBatch.DrawString(font, "kekeke", new Vector2(100, 300), Color.Black);
             spriteBatch.End();
 
 
