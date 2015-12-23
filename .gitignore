@@ -45,5 +45,38 @@ $RECYCLE.BIN/
 Network Trash Folder
 Temporary Items
 .apdisk
+<<<<<<< HEAD
+<<<<<<< HEAD
+*.xml
+Game1/Content/obj/Windows/specialist 2b q16 b.mgcontent
+=======
+*.cache
+>>>>>>> origin/master
+=======
 Game1/obj/x86/Debug/Game1.exe
 Game1/obj/x86/Debug/Game1.pdb
+>>>>>>> refs/remotes/origin/jenga
+<<<<<<< HEAD
+Game1/obj/x86/Debug/Game1.exe
+Game1/obj/x86/Debug/Game1.exe
+.vs/Game1/v14/.suo
+Game1/bin/Windows/Debug/Game1.pdb
+*.exe
+*.cache
+Game1/obj/x86/Debug/Game1.csproj.FileListAbsolute.txt
+=======
+>>>>>>> origin/master
+.vs/Game1/v14/.suo
+*.exe
+Game1/bin/Windows/Debug/Game1.pdb
+*.cache
+Game1/obj/x86/Debug/Game1.csprojResolveAssemblyReference.cache
+*.exe
+Game1/obj/x86/Debug/Game1.exe
+*.pdb
+.vs/Game1/v14/.suo
+Game1/Content/obj/Windows/hangmsn.mgcontent
+Game1/Content/obj/Windows/.mgcontent
+*.cache
+Game1/obj/x86/Debug/Game1.csproj.FileListAbsolute.txt
+Game1/Content/obj/Windows/.mgcontent

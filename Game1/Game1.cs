@@ -11,10 +11,23 @@ namespace Game1
     {
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
-        KeyboardState oldState;
+        private KeyboardState oldState;
         private string word;
         private char[] wordSplit;
         int charCount;
+        
+        //hangman spritesheet data
+        Texture2D hangmanSpriteSheet;
+        int hangmanFrameIndex = 0;
+        int hangmanFrameWidth = 200;
+        int hangmanFrameHeight = 200;
+
+        int livesLost = 0;
+        int winCount = 0;
+
+        //font
+        private SpriteFont font;
+        private int score = 0;
 
         public Game1()
         {
@@ -43,6 +56,8 @@ namespace Game1
         {
             // Create a new SpriteBatch, which can be used to draw textures.
             spriteBatch = new SpriteBatch(GraphicsDevice);
+            hangmanSpriteSheet = Content.Load<Texture2D>("hangman");
+            font = Content.Load<SpriteFont>("font1");
 
             // TODO: use this.Content to load your game content here
         }
@@ -53,7 +68,7 @@ namespace Game1
         /// </summary>
         protected override void UnloadContent()
         {
-            // TODO: Unload any non ContentManager content here
+            Content.Unload();
         }
 
         /// <summary>
@@ -90,15 +105,28 @@ namespace Game1
                     
                     inString = keys[0].ToString(); // stores inputted letter
                     string lowerInString = inString.ToLower(); // needs to be lower case for comparison to lowercase word that was selected, all words in array are totally lowercase
-                    for(int i = 0; i < charCount; i++)
+                    bool youWin = false;
+                    for (int i = 0; i < charCount; i++)
                     {
+                       
                         if(wordSplit[i].ToString() == lowerInString)
                         {
                             //input letter matches one in the word
+                            winCount += 1;
+                            youWin = true;
+                            if (i == charCount - 1)
+                            {
+                                break;
+                            }
                         }
                         else
                         {
                             //input letter doesnt match
+                            
+                            if (i == charCount - 1 && youWin == false)
+                            {
+                                livesLost += 1;
+                            }
 
                         }
                     }
@@ -109,7 +137,10 @@ namespace Game1
                 }
                 
             }
-
+            if(winCount == charCount)
+            {
+                Exit();
+            }
             oldState = newState;
 
 
@@ -122,9 +153,22 @@ namespace Game1
         /// <param name="gameTime">Provides a snapshot of timing values.</param>
         protected override void Draw(GameTime gameTime)
         {
+            Rectangle source = new Rectangle(hangmanFrameIndex * hangmanFrameWidth, 0, hangmanFrameWidth, hangmanFrameHeight);
+            Vector2 position = new Vector2(200, this.Window.ClientBounds.Height / 2);
+            Vector2 origin = new Vector2(hangmanFrameWidth / 2.0f, hangmanFrameHeight);
             GraphicsDevice.Clear(Color.CornflowerBlue);
+            if (hangmanFrameIndex != 7)
+                hangmanFrameIndex = livesLost;
 
-            // TODO: Add your drawing code here
+            spriteBatch.Begin();
+            spriteBatch.Draw(hangmanSpriteSheet, position, source, Color.White, 0.0f,
+  origin, 1.0f, SpriteEffects.None, 0.0f);
+            spriteBatch.DrawString(font, "Word:", new Vector2(500, 80), Color.Black);
+            spriteBatch.DrawString(font, word, new Vector2(500, 150), Color.Black);
+            spriteBatch.DrawString(font, "Incorrect Letters", new Vector2(250, 250), Color.Black);
+            spriteBatch.DrawString(font, "kekeke", new Vector2(100, 300), Color.Black);
+            spriteBatch.End();
+
 
             base.Draw(gameTime);
         }

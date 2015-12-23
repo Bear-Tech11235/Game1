@@ -22,6 +22,37 @@ C:\Users\joe\Documents\Visual Studio 2015\Projects\Game1\Game1\bin\Windows\Debug
 C:\Users\joe\Documents\Visual Studio 2015\Projects\Game1\Game1\bin\Windows\Debug\SharpDX.Direct3D9.xml
 C:\Users\joe\Documents\Visual Studio 2015\Projects\Game1\Game1\obj\x86\Debug\Game1.exe
 C:\Users\joe\Documents\Visual Studio 2015\Projects\Game1\Game1\obj\x86\Debug\Game1.pdb
+C:\Users\joe\Documents\Visual Studio 2015\Projects\Game1\Game1\bin\Windows\Debug\Content\specialist 2b q16 b.xnb
 C:\Users\joe\Documents\Visual Studio 2015\Projects\Game1\Game1\bin\Windows\Debug\Content\font1.xnb
 C:\Users\joe\Documents\Visual Studio 2015\Projects\Game1\Game1\bin\Windows\Debug\Content\lol.xnb
 C:\Users\joe\Documents\Visual Studio 2015\Projects\Game1\Game1\obj\x86\Debug\Game1.csprojResolveAssemblyReference.cache
+C:\Users\joe\Documents\Visual Studio 2015\Projects\Game1\Game1\bin\Windows\Debug\Content\hangmsn.xnb
+D:\Beartech\Documents\Visual Studio 2015\Projects\Game1\Game1\obj\x86\Debug\Game1.exe
+D:\Beartech\Documents\Visual Studio 2015\Projects\Game1\Game1\obj\x86\Debug\Game1.pdb
+D:\Beartech\Documents\Visual Studio 2015\Projects\Game1\Game1\bin\Windows\Debug\Content\font1.xnb
+D:\Beartech\Documents\Visual Studio 2015\Projects\Game1\Game1\bin\Windows\Debug\Content\lol.xnb
+D:\Beartech\Documents\Visual Studio 2015\Projects\Game1\Game1\bin\Windows\Debug\Content\specialist 2b q16 b.xnb
+D:\Beartech\Documents\Visual Studio 2015\Projects\Game1\Game1\bin\Windows\Debug\Game1.exe
+D:\Beartech\Documents\Visual Studio 2015\Projects\Game1\Game1\bin\Windows\Debug\Game1.pdb
+D:\Beartech\Documents\Visual Studio 2015\Projects\Game1\Game1\bin\Windows\Debug\MonoGame.Framework.dll
+D:\Beartech\Documents\Visual Studio 2015\Projects\Game1\Game1\bin\Windows\Debug\SharpDX.MediaFoundation.dll
+D:\Beartech\Documents\Visual Studio 2015\Projects\Game1\Game1\bin\Windows\Debug\SharpDX.dll
+D:\Beartech\Documents\Visual Studio 2015\Projects\Game1\Game1\bin\Windows\Debug\SharpDX.XAudio2.dll
+D:\Beartech\Documents\Visual Studio 2015\Projects\Game1\Game1\bin\Windows\Debug\SharpDX.DXGI.dll
+D:\Beartech\Documents\Visual Studio 2015\Projects\Game1\Game1\bin\Windows\Debug\SharpDX.Direct3D11.dll
+D:\Beartech\Documents\Visual Studio 2015\Projects\Game1\Game1\bin\Windows\Debug\SharpDX.Direct2D1.dll
+D:\Beartech\Documents\Visual Studio 2015\Projects\Game1\Game1\bin\Windows\Debug\SharpDX.XInput.dll
+D:\Beartech\Documents\Visual Studio 2015\Projects\Game1\Game1\bin\Windows\Debug\SharpDX.RawInput.dll
+D:\Beartech\Documents\Visual Studio 2015\Projects\Game1\Game1\bin\Windows\Debug\SharpDX.Direct3D9.dll
+D:\Beartech\Documents\Visual Studio 2015\Projects\Game1\Game1\bin\Windows\Debug\MonoGame.Framework.xml
+D:\Beartech\Documents\Visual Studio 2015\Projects\Game1\Game1\bin\Windows\Debug\SharpDX.MediaFoundation.xml
+D:\Beartech\Documents\Visual Studio 2015\Projects\Game1\Game1\bin\Windows\Debug\SharpDX.xml
+D:\Beartech\Documents\Visual Studio 2015\Projects\Game1\Game1\bin\Windows\Debug\SharpDX.XAudio2.xml
+D:\Beartech\Documents\Visual Studio 2015\Projects\Game1\Game1\bin\Windows\Debug\SharpDX.DXGI.xml
+D:\Beartech\Documents\Visual Studio 2015\Projects\Game1\Game1\bin\Windows\Debug\SharpDX.Direct3D11.xml
+D:\Beartech\Documents\Visual Studio 2015\Projects\Game1\Game1\bin\Windows\Debug\SharpDX.Direct2D1.xml
+D:\Beartech\Documents\Visual Studio 2015\Projects\Game1\Game1\bin\Windows\Debug\SharpDX.XInput.xml
+D:\Beartech\Documents\Visual Studio 2015\Projects\Game1\Game1\bin\Windows\Debug\SharpDX.RawInput.xml
+D:\Beartech\Documents\Visual Studio 2015\Projects\Game1\Game1\bin\Windows\Debug\SharpDX.Direct3D9.xml
+D:\Beartech\Documents\Visual Studio 2015\Projects\Game1\Game1\obj\x86\Debug\Game1.csprojResolveAssemblyReference.cache
+D:\Beartech\Documents\Visual Studio 2015\Projects\Game1\Game1\bin\Windows\Debug\Content\hangman.xnb
