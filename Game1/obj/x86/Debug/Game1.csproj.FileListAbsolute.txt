@@ -56,3 +56,5 @@ D:\Beartech\Documents\Visual Studio 2015\Projects\Game1\Game1\obj\x86\Debug\Game
 D:\Beartech\Documents\Visual Studio 2015\Projects\Game1\Game1\bin\Windows\Debug\Content\hangman.xnb
 C:\Users\joe\Documents\Visual Studio 2015\Projects\Game1\Game1\bin\Windows\Debug\Content\hangman.xnb
 D:\Beartech\Documents\Visual Studio 2015\Projects\Game1\Game1\bin\Windows\Debug\Content\hmBackground1.xnb
+C:\Users\joe\Documents\Visual Studio 2015\Projects\Game1\Game1\bin\Windows\Debug\Content\hmBackground1.xnb
+C:\Users\joe\Documents\Visual Studio 2015\Projects\Game1\Game1\obj\x86\Debug\Game1.csprojResolveAssemblyReference.cache

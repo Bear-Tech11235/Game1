@@ -4,7 +4,7 @@
   <Platform>Windows</Platform>
   <Config />
   <SourceFiles>
-    <File>D:/Beartech/Documents/Visual Studio 2015/Projects/Game1/Game1/Content/hangman.png</File>
-    <File>D:/Beartech/Documents/Visual Studio 2015/Projects/Game1/Game1/Content/hmBackground1.png</File>
+    <File>C:/Users/joe/Documents/Visual Studio 2015/Projects/Game1/Game1/Content/hangman.png</File>
+    <File>C:/Users/joe/Documents/Visual Studio 2015/Projects/Game1/Game1/Content/hmBackground1.png</File>
   </SourceFiles>
 </SourceFileCollection>
