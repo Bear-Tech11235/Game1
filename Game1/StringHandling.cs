@@ -1020,5 +1020,10 @@ namespace Game1
             return words[rnd.Next(1003)];
         }
 
+        public bool hasBeenUsed(string[] right , string[] wrong)
+        {
+            return true;
+        }
+
     }
 }
