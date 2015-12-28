@@ -18,6 +18,10 @@ namespace Game1
         private char[] wordSplit;
         int charCount;
         List<string> WinList =  new List<string>();
+        List<string> LossList = new List<string>();
+
+        float textScale = 0f;
+
         //hangman spritesheet data
         Texture2D hangmanSpriteSheet;
         int hangmanFrameIndex = 0;
@@ -113,6 +117,22 @@ namespace Game1
                     inString = keys[0].ToString(); // stores inputted letter
                     string lowerInString = inString.ToLower(); // needs to be lower case for comparison to lowercase word that was selected, all words in array are totally lowercase
                     bool youWin = false;
+                    for(int i = 0; i < WinList.Count; i++)
+                    {
+                        if (WinList[i] == lowerInString)
+                        {
+                            textScale = 1f;
+                            goto LoopBreak;
+                        }
+                    }
+                    for (int i = 0; i < LossList.Count; i++)
+                    {
+                        if (LossList[i] == lowerInString)
+                        {
+                            textScale = 1f;
+                            goto LoopBreak;
+                        }
+                    }
                     for (int i = 0; i < charCount; i++)
                     {
                        
@@ -134,6 +154,7 @@ namespace Game1
                             if (i == charCount - 1 && youWin == false)
                             {
                                 livesLost += 1;
+                                LossList.Add(lowerInString);
                             }
 
                         }
@@ -145,12 +166,14 @@ namespace Game1
                 }
                 
             }
+            LoopBreak:
             if(winCount == charCount)
             {
                 Exit();
             }
             oldState = newState;
 
+            
 
             base.Update(gameTime);
         }
@@ -171,10 +194,25 @@ namespace Game1
             spriteBatch.Begin();
             spriteBatch.Draw(hangmanSpriteSheet, position, source, Color.White, 0.0f,
   origin, 1.0f, SpriteEffects.None, 0.0f);
-            spriteBatch.DrawString(font, "Word:", new Vector2(500, 80), Color.Black);
+            spriteBatch.DrawString(font, "Word:", new Vector2(100, 80), Color.Black);
+            for(int i = 0; i < WinList.Count; i++)
+            {
+                spriteBatch.DrawString(font, WinList[i].ToUpper(), new Vector2(230 + i * 40, 80), Color.Black);
+            }
             spriteBatch.DrawString(font, word, new Vector2(500, 150), Color.Black);
-            spriteBatch.DrawString(font, "Incorrect Letters", new Vector2(250, 250), Color.Black);
-            spriteBatch.DrawString(font, "kekeke", new Vector2(100, 300), Color.Black);
+            spriteBatch.DrawString(font, "Incorrect Letters", new Vector2(40, 250), Color.Black);
+            for(int i = 0; i < LossList.Count; i++)
+            {
+                spriteBatch.DrawString(font, LossList[i].ToUpper(), new Vector2(40 + i * 40, 300), Color.Black);
+            }
+            //testing growing/shrinking text
+            if (textScale > 0)
+            {
+                textScale -= 0.005f;
+                
+            }
+            spriteBatch.DrawString(font, "You have already entered that letter!", new Vector2(50, 50), Color.Black, 0f, new Vector2(0, 0), textScale, SpriteEffects.None, 0.0f);
+
             spriteBatch.End();
 
 

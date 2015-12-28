@@ -25,7 +25,6 @@ C:\Users\joe\Documents\Visual Studio 2015\Projects\Game1\Game1\obj\x86\Debug\Gam
 C:\Users\joe\Documents\Visual Studio 2015\Projects\Game1\Game1\bin\Windows\Debug\Content\specialist 2b q16 b.xnb
 C:\Users\joe\Documents\Visual Studio 2015\Projects\Game1\Game1\bin\Windows\Debug\Content\font1.xnb
 C:\Users\joe\Documents\Visual Studio 2015\Projects\Game1\Game1\bin\Windows\Debug\Content\lol.xnb
-C:\Users\joe\Documents\Visual Studio 2015\Projects\Game1\Game1\obj\x86\Debug\Game1.csprojResolveAssemblyReference.cache
 D:\Beartech\Documents\Visual Studio 2015\Projects\Game1\Game1\obj\x86\Debug\Game1.exe
 D:\Beartech\Documents\Visual Studio 2015\Projects\Game1\Game1\obj\x86\Debug\Game1.pdb
 D:\Beartech\Documents\Visual Studio 2015\Projects\Game1\Game1\bin\Windows\Debug\Content\font1.xnb
