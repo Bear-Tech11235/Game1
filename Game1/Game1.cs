@@ -31,14 +31,18 @@ namespace Game1
         int livesLost = 0;
         int winCount = 0;
 
+        Texture2D background;
+
         //font
         private SpriteFont font;
-        private int score = 0;
 
         public Game1()
         {
             graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
+            graphics.IsFullScreen = false;
+            graphics.PreferredBackBufferWidth = 800;
+            graphics.PreferredBackBufferHeight = 480;
         }
 
         /// <summary>
@@ -63,6 +67,7 @@ namespace Game1
             // Create a new SpriteBatch, which can be used to draw textures.
             spriteBatch = new SpriteBatch(GraphicsDevice);
             hangmanSpriteSheet = Content.Load<Texture2D>("hangman");
+            background = Content.Load<Texture2D>("hmBackground1");
             font = Content.Load<SpriteFont>("font1");
 
             // TODO: use this.Content to load your game content here
@@ -187,23 +192,25 @@ namespace Game1
             Rectangle source = new Rectangle(hangmanFrameIndex * hangmanFrameWidth, 0, hangmanFrameWidth, hangmanFrameHeight);
             Vector2 position = new Vector2(200, this.Window.ClientBounds.Height / 2);
             Vector2 origin = new Vector2(hangmanFrameWidth / 2.0f, hangmanFrameHeight);
+            Vector2 backgroundvector = new Vector2(0, 0);
             GraphicsDevice.Clear(Color.CornflowerBlue);
             if (hangmanFrameIndex != 7)
                 hangmanFrameIndex = livesLost;
 
             spriteBatch.Begin();
+            spriteBatch.Draw(background, backgroundvector, Color.White);
             spriteBatch.Draw(hangmanSpriteSheet, position, source, Color.White, 0.0f,
   origin, 1.0f, SpriteEffects.None, 0.0f);
-            spriteBatch.DrawString(font, "Word:", new Vector2(100, 80), Color.Black);
+            spriteBatch.DrawString(font, "Word:", new Vector2(510, 50), Color.Black);
             for(int i = 0; i < WinList.Count; i++)
             {
-                spriteBatch.DrawString(font, WinList[i].ToUpper(), new Vector2(230 + i * 40, 80), Color.Black);
+                spriteBatch.DrawString(font, WinList[i].ToUpper(), new Vector2(450 + i * 40, 100), Color.Black);
             }
-            spriteBatch.DrawString(font, word, new Vector2(500, 150), Color.Black);
-            spriteBatch.DrawString(font, "Incorrect Letters", new Vector2(40, 250), Color.Black);
+            spriteBatch.DrawString(font, word, new Vector2(500, 200), Color.Black);
+            spriteBatch.DrawString(font, "Incorrect Letters", new Vector2(40, 290), Color.Black);
             for(int i = 0; i < LossList.Count; i++)
             {
-                spriteBatch.DrawString(font, LossList[i].ToUpper(), new Vector2(40 + i * 40, 300), Color.Black);
+                spriteBatch.DrawString(font, LossList[i].ToUpper(), new Vector2(40 + i * 40, 340), Color.Black);
             }
             //testing growing/shrinking text
             if (textScale > 0)

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <SourceFile>D:/Beartech/Documents/Visual Studio 2015/Projects/Game1/Game1/Content/hangman.png</SourceFile>
-  <SourceTime>2015-12-28T12:24:32.8427878+11:00</SourceTime>
-  <DestFile>D:/Beartech/Documents/Visual Studio 2015/Projects/Game1/Game1/Content/bin/Windows/hangman.xnb</DestFile>
-  <DestTime>2015-12-28T22:05:57.9318152+11:00</DestTime>
+  <SourceFile>D:/Beartech/Documents/Visual Studio 2015/Projects/Game1/Game1/Content/hmBackground1.png</SourceFile>
+  <SourceTime>2015-12-28T21:24:48.6183152+11:00</SourceTime>
+  <DestFile>D:/Beartech/Documents/Visual Studio 2015/Projects/Game1/Game1/Content/bin/Windows/hmBackground1.xnb</DestFile>
+  <DestTime>2015-12-28T22:05:57.9984402+11:00</DestTime>
   <Importer>TextureImporter</Importer>
   <ImporterTime>2015-12-18T08:52:48+11:00</ImporterTime>
   <Processor>TextureProcessor</Processor>
